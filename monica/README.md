@@ -20,13 +20,13 @@ WARNING:
 	[Monica Team](https://github.com/monicahq/docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.4.0-apache`, `3.4-apache`, `3-apache`, `apache`, `3.4.0`, `3.4`, `3`, `latest`](https://github.com/monicahq/docker/blob/62974d66881d7ba2b7172ea1d82b88485f65c579/apache/Dockerfile)
--	[`3.4.0-fpm`, `3.4-fpm`, `3-fpm`, `fpm`](https://github.com/monicahq/docker/blob/62974d66881d7ba2b7172ea1d82b88485f65c579/fpm/Dockerfile)
--	[`3.4.0-fpm-alpine`, `3.4-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine`](https://github.com/monicahq/docker/blob/62974d66881d7ba2b7172ea1d82b88485f65c579/fpm-alpine/Dockerfile)
+-	[`3.7.0-apache`, `3.7-apache`, `3-apache`, `apache`, `3.7.0`, `3.7`, `3`, `latest`](https://github.com/monicahq/docker/blob/c0340b2017890e6a465d1d4ee03331d2effc0335/apache/Dockerfile)
+-	[`3.7.0-fpm-alpine`, `3.7-fpm-alpine`, `3-fpm-alpine`, `fpm-alpine`](https://github.com/monicahq/docker/blob/c0340b2017890e6a465d1d4ee03331d2effc0335/fpm-alpine/Dockerfile)
+-	[`3.7.0-fpm`, `3.7-fpm`, `3-fpm`, `fpm`](https://github.com/monicahq/docker/blob/c0340b2017890e6a465d1d4ee03331d2effc0335/fpm/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -111,7 +111,7 @@ where `monica` is the name of the service in your `docker-compose.yml` file.
 
 ## Configuration using environment variables
 
-The Monica image will use environment variables to setup the application. See [Monica documentation](https://github.com/monicahq/monica/blob/master/.env.example) for common used variables you should setup.
+The Monica image will use environment variables to setup the application. See [Monica documentation](https://github.com/monicahq/monica/blob/main/.env.example) for common used variables you should setup.
 
 ## Running the image with docker-compose
 
@@ -287,7 +287,7 @@ To minimize image size, it's uncommon for additional related tools (such as `git
 
 # License
 
-View [license information](https://github.com/monicahq/monica/blob/master/LICENSE) for the software contained in this image.
+View [license information](https://github.com/monicahq/monica/blob/main/LICENSE.md) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 

@@ -20,16 +20,16 @@ WARNING:
 	[nupplaPhil](https://github.com/friendica/docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2021.09-apache`, `apache`, `stable-apache`, `2021.09`, `latest`, `stable`](https://github.com/friendica/docker/blob/51dc7021f0f377a425de24ca32738b58f6867e0c/2021.09/apache/Dockerfile)
--	[`2021.09-fpm`, `fpm`, `stable-fpm`](https://github.com/friendica/docker/blob/51dc7021f0f377a425de24ca32738b58f6867e0c/2021.09/fpm/Dockerfile)
--	[`2021.09-fpm-alpine`, `fpm-alpine`, `stable-fpm-alpine`](https://github.com/friendica/docker/blob/51dc7021f0f377a425de24ca32738b58f6867e0c/2021.09/fpm-alpine/Dockerfile)
--	[`2021.12-dev-apache`, `dev-apache`, `2021.12-dev`, `dev`](https://github.com/friendica/docker/blob/8aa05541382295d09f2b4debf5c3d97e233f8599/2021.12-dev/apache/Dockerfile)
--	[`2021.12-dev-fpm`, `dev-fpm`](https://github.com/friendica/docker/blob/8aa05541382295d09f2b4debf5c3d97e233f8599/2021.12-dev/fpm/Dockerfile)
--	[`2021.12-dev-fpm-alpine`, `dev-fpm-alpine`](https://github.com/friendica/docker/blob/8aa05541382295d09f2b4debf5c3d97e233f8599/2021.12-dev/fpm-alpine/Dockerfile)
+-	[`2022.10-apache`, `apache`, `stable-apache`, `2022.10`, `latest`, `stable`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.10/apache/Dockerfile)
+-	[`2022.10-fpm`, `fpm`, `stable-fpm`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.10/fpm/Dockerfile)
+-	[`2022.10-fpm-alpine`, `fpm-alpine`, `stable-fpm-alpine`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.10/fpm-alpine/Dockerfile)
+-	[`2022.12-dev-apache`, `dev-apache`, `2022.12-dev`, `dev`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.12-dev/apache/Dockerfile)
+-	[`2022.12-dev-fpm`, `dev-fpm`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.12-dev/fpm/Dockerfile)
+-	[`2022.12-dev-fpm-alpine`, `dev-fpm-alpine`](https://github.com/friendica/docker/blob/6df70e0d04bdfd9e0c38f0cf193dcf0ee27890c1/2022.12-dev/fpm-alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -106,12 +106,16 @@ Friendica requires background tasks to fetch and send all kind of messages and m
 -	`FRIENDICA_NO_VALIDATION` If set to `true`, the URL and E-Mail validation will be disabled.
 -	`FRIENDICA_DATA` Set the name of the storage provider (e.g `Filesystem` to use filesystem), default ist the DB backend.
 -	`FRIENDICA_DATA_DIR` The data directory of the Friendica server (Default: /var/www/data).
+-	`FRIENDICA_UPGRADE` Force starting the Friendica update even it's the same version (Default: `false`).
 
 **Friendica Logging**
 
 -	`FRIENDICA_DEBUGGING` If set to `true`, the logging of Friendica is enabled.
 -	`FRIENDICA_LOGFILE` (optional) The path to the logfile (Default: /var/www/friendica.log).
 -	`FRIENDICA_LOGLEVEL` (optional) The loglevel to log (Default: notice).
+-	`FRIENDICA_LOGGER` (optional) Set the type - stream, syslog, monolog (Default: stream).
+-	`FRIENDICA_SYSLOG_FLAGS` (optional) In case syslog is used, set the corresponding flags (Default: `LOG_PID | LOG_ODELAY | LOG_CONS | LOG_PERROR`).
+-	`FRIENDICA_SYSLOG_FACTORY` (optional) In case syslog is used, set the corresponding factory (Default: `LOG_USER`).
 
 **Database** (**required at installation**)
 
@@ -127,6 +131,11 @@ Friendica requires background tasks to fetch and send all kind of messages and m
 -	`REDIS_PORT` (optional) The port of the redis instance (in case of locking).
 -	`REDIS_PW` (optional) The password for the redis instance (in case of locking).
 -	`REDIS_DB` (optional) The database instance of the redis instance (in case of locking).
+
+**PHP limits**
+
+-	`PHP_MEMORY_LIMIT` (default `512M`) This sets the maximum amount of memory in bytes that a script is allowed to allocate. This is meant to help prevent poorly written scripts from eating up all available memory, but it can prevent normal operation if set too tight.
+-	`PHP_UPLOAD_LIMIT` (default `512M`) This sets the upload limit (`post_max_size` and `upload_max_filesize`) for big files. Note that you may have to change other limits depending on your client, webserver or operating system.
 
 ## Administrator account
 
@@ -376,25 +385,7 @@ Then run `docker-compose up -d`, now you can access Friendica at http://localhos
 
 # Special settings for DEV/RC images
 
-The `*-dev` and `*-rc` branches are having additional possibilities to get the latest sources of Friendica.
-
-## Possible Environment Variables
-
-The following environment variables are possible for these kind of images too:
-
-**Develop/Release Candidate Settings**
-
--	`FRIENDICA_UPGRADE` If set to `true`, a develop or release candidat node will get updated at startup.
--	`FRIENDICA_REPOSITORY` If set, a custom repository will be chosen (Default: `friendica`)
--	`FRIENDICA_ADDONS_REPO` If set, a custom repository for the addons will be chosen (Default: `friendica`)
--	`FRIENDICA_VERSION` If set, a custom branch will be chosen (Default is based on the chosen image version)
--	`FRIENDICA_ADDONS` If set, a custom branch for the addons will be chosen (Default is based on the chosen image version)
-
-## Updating to a newer version
-
-You don't need to pull the image for each commit in [friendica](https://github.com/friendica/friendica/). Instead, the release candidate or develop branch will get updated if no installation was found or the environment variable `FRIENDICA_UPGRADE` is set to `true`.
-
-It will clone the latest Friendica version and copy it to your working directory.
+The `*-dev` and `*-rc` branches are directly downloaded and verified at each docker start to ensure that the latest sources are used. The parameter `FRIENDICA_UPGRADE` is required to be `true` (Default: `false`) to activate this behavior.
 
 # Questions / Issues
 

@@ -20,12 +20,12 @@ WARNING:
 	The Dart Docker Team
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.14.4-sdk`, `2.14-sdk`, `2-sdk`, `stable-sdk`, `sdk`, `2.14.4`, `2.14`, `2`, `stable`, `latest`](https://github.com/dart-lang/dart-docker/blob/348affd04356b3fe29269b13311838f3082cc104/stable/buster/Dockerfile)
--	[`2.15.0-268.8.beta-sdk`, `beta-sdk`, `2.15.0-268.8.beta`, `beta`](https://github.com/dart-lang/dart-docker/blob/348affd04356b3fe29269b13311838f3082cc104/beta/buster/Dockerfile)
+-	[`2.18.4-sdk`, `2.18-sdk`, `2-sdk`, `stable-sdk`, `sdk`, `2.18.4`, `2.18`, `2`, `stable`, `latest`](https://github.com/dart-lang/dart-docker/blob/582166334d120ec451b2e8083b6ddee208f0c4e6/stable/bullseye/Dockerfile)
+-	[`2.19.0-374.1.beta-sdk`, `beta-sdk`, `2.19.0-374.1.beta`, `beta`](https://github.com/dart-lang/dart-docker/blob/582166334d120ec451b2e8083b6ddee208f0c4e6/beta/bullseye/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -58,7 +58,7 @@ We recommend using small runtime images that leverage Dart's support for ahead-o
 
 ### Creating a Dart server app
 
-After installing the Dart SDK, use the `dart` command to create a new server app:
+After [installing](https://dart.dev/get-dart) the Dart SDK, version 2.14 or later, use the `dart` command to create a new server app:
 
 ```shell
 $ dart create -t server-shelf myserver

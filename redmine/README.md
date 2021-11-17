@@ -20,19 +20,15 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/redmine)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.2.3`, `4.2`, `4`, `latest`](https://github.com/docker-library/redmine/blob/282e53760ea23d3415bb1e45d2a0d930f47575c3/4.2/Dockerfile)
--	[`4.2.3-passenger`, `4.2-passenger`, `4-passenger`, `passenger`](https://github.com/docker-library/redmine/blob/5444fd564ffba5c871a4d964b54c5559ee52e61e/4.2/passenger/Dockerfile)
--	[`4.2.3-alpine`, `4.2-alpine`, `4-alpine`, `alpine`](https://github.com/docker-library/redmine/blob/282e53760ea23d3415bb1e45d2a0d930f47575c3/4.2/alpine/Dockerfile)
--	[`4.1.5`, `4.1`](https://github.com/docker-library/redmine/blob/5c6ee97401c76351a5e228548717dfc4130f4179/4.1/Dockerfile)
--	[`4.1.5-passenger`, `4.1-passenger`](https://github.com/docker-library/redmine/blob/5444fd564ffba5c871a4d964b54c5559ee52e61e/4.1/passenger/Dockerfile)
--	[`4.1.5-alpine`, `4.1-alpine`](https://github.com/docker-library/redmine/blob/5c6ee97401c76351a5e228548717dfc4130f4179/4.1/alpine/Dockerfile)
--	[`4.0.9`, `4.0`](https://github.com/docker-library/redmine/blob/02809f9dead7b26e490f84107c7a2170f11fd2b9/4.0/Dockerfile)
--	[`4.0.9-passenger`, `4.0-passenger`](https://github.com/docker-library/redmine/blob/5444fd564ffba5c871a4d964b54c5559ee52e61e/4.0/passenger/Dockerfile)
--	[`4.0.9-alpine`, `4.0-alpine`](https://github.com/docker-library/redmine/blob/02809f9dead7b26e490f84107c7a2170f11fd2b9/4.0/alpine/Dockerfile)
+-	[`5.0.3`, `5.0`, `5`, `latest`, `5.0.3-bullseye`, `5.0-bullseye`, `5-bullseye`, `bullseye`](https://github.com/docker-library/redmine/blob/cae991b96a33dbf0771dc73c5e145c9badc4c6c8/5.0/Dockerfile)
+-	[`5.0.3-alpine`, `5.0-alpine`, `5-alpine`, `alpine`, `5.0.3-alpine3.15`, `5.0-alpine3.15`, `5-alpine3.15`, `alpine3.15`](https://github.com/docker-library/redmine/blob/cae991b96a33dbf0771dc73c5e145c9badc4c6c8/5.0/alpine/Dockerfile)
+-	[`4.2.8`, `4.2`, `4`, `4.2.8-bullseye`, `4.2-bullseye`, `4-bullseye`](https://github.com/docker-library/redmine/blob/cae991b96a33dbf0771dc73c5e145c9badc4c6c8/4.2/Dockerfile)
+-	[`4.2.8-passenger`, `4.2-passenger`, `4-passenger`](https://github.com/docker-library/redmine/blob/160a6433d3c392e0f332b5b62317117a2d7de943/4.2/passenger/Dockerfile)
+-	[`4.2.8-alpine`, `4.2-alpine`, `4-alpine`, `4.2.8-alpine3.15`, `4.2-alpine3.15`, `4-alpine3.15`](https://github.com/docker-library/redmine/blob/cae991b96a33dbf0771dc73c5e145c9badc4c6c8/4.2/alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,7 +36,7 @@ WARNING:
 	[https://github.com/docker-library/redmine/issues](https://github.com/docker-library/redmine/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/redmine/), [`arm32v5`](https://hub.docker.com/r/arm32v5/redmine/), [`arm32v7`](https://hub.docker.com/r/arm32v7/redmine/), [`arm64v8`](https://hub.docker.com/r/arm64v8/redmine/), [`i386`](https://hub.docker.com/r/i386/redmine/), [`ppc64le`](https://hub.docker.com/r/ppc64le/redmine/), [`s390x`](https://hub.docker.com/r/s390x/redmine/)
+	[`amd64`](https://hub.docker.com/r/amd64/redmine/), [`arm32v5`](https://hub.docker.com/r/arm32v5/redmine/), [`arm32v6`](https://hub.docker.com/r/arm32v6/redmine/), [`arm32v7`](https://hub.docker.com/r/arm32v7/redmine/), [`arm64v8`](https://hub.docker.com/r/arm64v8/redmine/), [`i386`](https://hub.docker.com/r/i386/redmine/), [`ppc64le`](https://hub.docker.com/r/ppc64le/redmine/), [`s390x`](https://hub.docker.com/r/s390x/redmine/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/redmine/` directory](https://github.com/docker-library/repo-info/blob/master/repos/redmine) ([history](https://github.com/docker-library/repo-info/commits/master/repos/redmine))  
@@ -235,6 +231,8 @@ The `redmine` images come in many flavors, each designed for a specific use case
 ## `redmine:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+Some of these tags may have names like bullseye in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
 
 ## `redmine:<version>-alpine`
 

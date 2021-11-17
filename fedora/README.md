@@ -20,14 +20,14 @@ WARNING:
 	[Fedora Release Engineering](https://github.com/fedora-cloud/docker-brew-fedora)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`33`](https://github.com/fedora-cloud/docker-brew-fedora/blob/2cb6076825a76904bed22def0bf0de39bd4790ef/x86_64/Dockerfile)
--	[`34`](https://github.com/fedora-cloud/docker-brew-fedora/blob/a6192373b9d98ebd25a485c56a57a707915713ca/x86_64/Dockerfile)
--	[`35`, `latest`](https://github.com/fedora-cloud/docker-brew-fedora/blob/ef5f8163081142ffa397b378b01a77c450384cba/x86_64/Dockerfile)
--	[`rawhide`, `36`](https://github.com/fedora-cloud/docker-brew-fedora/blob/1ec2db649cc85b74d9e7527131dfe1b44c346ae3/x86_64/Dockerfile)
+-	[`35`](https://github.com/fedora-cloud/docker-brew-fedora/blob/ca74a933654e5b53048d75225ae6976bdadf64b1/x86_64/Dockerfile)
+-	[`36`](https://github.com/fedora-cloud/docker-brew-fedora/blob/e810becd1150a8e1f05d7765cd378e5bc02e7167/x86_64/Dockerfile)
+-	[`37`, `latest`](https://github.com/fedora-cloud/docker-brew-fedora/blob/886b921b3dc7e58aea627372b0f5509a66d4dc38/x86_64/Dockerfile)
+-	[`38`, `rawhide`](https://github.com/fedora-cloud/docker-brew-fedora/blob/4aa98d132a5424bb790601c94a4c573a58ddd4b3/x86_64/Dockerfile)
 
 # Quick reference (cont.)
 

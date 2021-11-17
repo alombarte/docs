@@ -20,14 +20,14 @@ WARNING:
 	[Rocket.Chat](https://github.com/RocketChat/Docker.Official.Image)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0.3`, `4.0`, `4`, `latest`](https://github.com/RocketChat/Docker.Official.Image/blob/b463e624414e635a68021c421eae69cbb41c118b/4.0/Dockerfile)
--	[`3.18.2`, `3.18`, `3`](https://github.com/RocketChat/Docker.Official.Image/blob/2ee2b5ea046f5d70731d0e8c60e2766574124a19/3.18/Dockerfile)
--	[`3.17.3`, `3.17`](https://github.com/RocketChat/Docker.Official.Image/blob/2ee2b5ea046f5d70731d0e8c60e2766574124a19/3.17/Dockerfile)
--	[`3.16.5`, `3.16`](https://github.com/RocketChat/Docker.Official.Image/blob/2ee2b5ea046f5d70731d0e8c60e2766574124a19/3.16/Dockerfile)
+-	[`5.2.0`, `5.2`, `5`, `latest`](https://github.com/RocketChat/Docker.Official.Image/blob/2a14b3f65fecb108c1e10f39f746c5c75ca5474c/5.2/Dockerfile)
+-	[`5.1.4`, `5.1`](https://github.com/RocketChat/Docker.Official.Image/blob/2a14b3f65fecb108c1e10f39f746c5c75ca5474c/5.1/Dockerfile)
+-	[`5.0.7`, `5.0`](https://github.com/RocketChat/Docker.Official.Image/blob/2a14b3f65fecb108c1e10f39f746c5c75ca5474c/5.0/Dockerfile)
+-	[`4.8.6`, `4.8`, `4`](https://github.com/RocketChat/Docker.Official.Image/blob/2a14b3f65fecb108c1e10f39f746c5c75ca5474c/4.8/Dockerfile)
 
 # Quick reference (cont.)
 

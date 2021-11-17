@@ -20,15 +20,15 @@ WARNING:
 	[the Traefik Project](https://github.com/traefik/traefik-library-image)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v2.5.4-windowsservercore-1809`, `2.5.4-windowsservercore-1809`, `v2.5-windowsservercore-1809`, `2.5-windowsservercore-1809`, `brie-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/f9d18d1eebcaf805d02bd683f771bcaebb643c44/windows/1809/Dockerfile)
--	[`v2.5.4`, `2.5.4`, `v2.5`, `2.5`, `brie`, `latest`](https://github.com/traefik/traefik-library-image/blob/f9d18d1eebcaf805d02bd683f771bcaebb643c44/alpine/Dockerfile)
--	[`v1.7.33-windowsservercore-1809`, `1.7.33-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/87f6cff7d81f0a10c093b0c8f73a3547f1cc33df/windows/1809/Dockerfile)
--	[`v1.7.33-alpine`, `1.7.33-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/traefik/traefik-library-image/blob/87f6cff7d81f0a10c093b0c8f73a3547f1cc33df/alpine/Dockerfile)
--	[`v1.7.33`, `1.7.33`, `v1.7`, `1.7`, `maroilles`](https://github.com/traefik/traefik-library-image/blob/87f6cff7d81f0a10c093b0c8f73a3547f1cc33df/scratch/Dockerfile)
+-	[`v2.9.5-windowsservercore-1809`, `2.9.5-windowsservercore-1809`, `v2.9-windowsservercore-1809`, `2.9-windowsservercore-1809`, `banon-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/78e52c7538f1a06c05d91d18d8ed0b467e69160e/windows/1809/Dockerfile)
+-	[`v2.9.5`, `2.9.5`, `v2.9`, `2.9`, `banon`, `latest`](https://github.com/traefik/traefik-library-image/blob/78e52c7538f1a06c05d91d18d8ed0b467e69160e/alpine/Dockerfile)
+-	[`v1.7.34-windowsservercore-1809`, `1.7.34-windowsservercore-1809`, `v1.7-windowsservercore-1809`, `1.7-windowsservercore-1809`, `maroilles-windowsservercore-1809`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/windows/1809/Dockerfile)
+-	[`v1.7.34-alpine`, `1.7.34-alpine`, `v1.7-alpine`, `1.7-alpine`, `maroilles-alpine`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/alpine/Dockerfile)
+-	[`v1.7.34`, `1.7.34`, `v1.7`, `1.7`, `maroilles`](https://github.com/traefik/traefik-library-image/blob/4434758cf14bbd1ec9511b3f2a37b0a6ce846db6/scratch/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -36,7 +36,7 @@ WARNING:
 	[https://github.com/traefik/traefik-library-image/issues](https://github.com/traefik/traefik-library-image/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
+	[`amd64`](https://hub.docker.com/r/amd64/traefik/), [`arm32v6`](https://hub.docker.com/r/arm32v6/traefik/), [`arm64v8`](https://hub.docker.com/r/arm64v8/traefik/), [`s390x`](https://hub.docker.com/r/s390x/traefik/), [`windows-amd64`](https://hub.docker.com/r/winamd64/traefik/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/traefik/` directory](https://github.com/docker-library/repo-info/blob/master/repos/traefik) ([history](https://github.com/docker-library/repo-info/commits/master/repos/traefik))  

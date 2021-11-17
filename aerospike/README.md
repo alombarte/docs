@@ -20,12 +20,12 @@ WARNING:
 	[Aerospike, Inc.](https://github.com/aerospike/aerospike-server-enterprise.docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`ee-5.7.0.8`](https://github.com/aerospike/aerospike-server-enterprise.docker/blob/2d11fe93cec1c1adc86968a26b1b8827f61dc81f/Dockerfile)
--	[`ce-5.7.0.8`](https://github.com/aerospike/aerospike-server.docker/blob/9316b9e2dca468e2bbed08e12550f5d208447a14/Dockerfile)
+-	[`ee-6.1.0.3`](https://github.com/aerospike/aerospike-server-enterprise.docker/blob/01871453aad7390a02a51dee11efe8e6a55f95cf/Dockerfile)
+-	[`ce-6.1.0.3`](https://github.com/aerospike/aerospike-server.docker/blob/4557452ca88bcad1929e91bd303b522a1c242b12/Dockerfile)
 
 # Quick reference (cont.)
 

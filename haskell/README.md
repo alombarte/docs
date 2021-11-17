@@ -20,12 +20,18 @@ WARNING:
 	[the Docker Community](https://github.com/haskell/docker-haskell)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`9.0.1-buster`, `9.0-buster`, `9-buster`, `buster`, `9.0.1`, `9.0`, `9`, `latest`](https://github.com/haskell/docker-haskell/blob/f08ade43f48981b87505fbecca852194954fa61b/9.0/buster/Dockerfile)
--	[`8.10.7-buster`, `8.10-buster`, `8-buster`, `8.10.7`, `8.10`, `8`](https://github.com/haskell/docker-haskell/blob/f08ade43f48981b87505fbecca852194954fa61b/8.10/buster/Dockerfile)
+-	[`9.4.3-buster`, `9.4-buster`, `9-buster`, `buster`, `9.4.3`, `9.4`, `9`, `latest`](https://github.com/haskell/docker-haskell/blob/b29df0224a5f76407a41c6662513201650fde976/9.4/buster/Dockerfile)
+-	[`9.4.3-slim-buster`, `9.4-slim-buster`, `9-slim-buster`, `slim-buster`, `9.4.3-slim`, `9.4-slim`, `9-slim`, `slim`](https://github.com/haskell/docker-haskell/blob/b29df0224a5f76407a41c6662513201650fde976/9.4/slim-buster/Dockerfile)
+-	[`9.2.5-buster`, `9.2-buster`, `9.2.5`, `9.2`](https://github.com/haskell/docker-haskell/blob/60a070f652853c4a1801ce00fcf2b880c79ecbfc/9.2/buster/Dockerfile)
+-	[`9.2.5-slim-buster`, `9.2-slim-buster`, `9.2.5-slim`, `9.2-slim`](https://github.com/haskell/docker-haskell/blob/60a070f652853c4a1801ce00fcf2b880c79ecbfc/9.2/slim-buster/Dockerfile)
+-	[`9.0.2-buster`, `9.0-buster`, `9.0.2`, `9.0`](https://github.com/haskell/docker-haskell/blob/4fd05c031a306bcc0057cdd04439700c418ffaf0/9.0/buster/Dockerfile)
+-	[`9.0.2-slim-buster`, `9.0-slim-buster`, `9.0.2-slim`, `9.0-slim`](https://github.com/haskell/docker-haskell/blob/4fd05c031a306bcc0057cdd04439700c418ffaf0/9.0/slim-buster/Dockerfile)
+-	[`8.10.7-buster`, `8.10-buster`, `8-buster`, `8.10.7`, `8.10`, `8`](https://github.com/haskell/docker-haskell/blob/4fd05c031a306bcc0057cdd04439700c418ffaf0/8.10/buster/Dockerfile)
+-	[`8.10.7-slim-buster`, `8.10-slim-buster`, `8-slim-buster`, `8.10.7-slim`, `8.10-slim`, `8-slim`](https://github.com/haskell/docker-haskell/blob/4fd05c031a306bcc0057cdd04439700c418ffaf0/8.10/slim-buster/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -33,7 +39,7 @@ WARNING:
 	[https://github.com/haskell/docker-haskell/issues](https://github.com/haskell/docker-haskell/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/haskell/)
+	[`amd64`](https://hub.docker.com/r/amd64/haskell/), [`arm64v8`](https://hub.docker.com/r/arm64v8/haskell/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/haskell/` directory](https://github.com/docker-library/repo-info/blob/master/repos/haskell) ([history](https://github.com/docker-library/repo-info/commits/master/repos/haskell))  
@@ -58,9 +64,11 @@ A large number of production-quality Haskell libraries are available from [Hacka
 
 ## About this image
 
-This image ships a minimal Haskell toolchain (`ghc` and `cabal-install`) as well as the `stack` tool ([https://www.haskellstack.org/](https://www.haskellstack.org/)).
+This image ships a minimal Haskell toolchain (`ghc` and `cabal-install`) as well as the `stack` tool ([https://www.haskellstack.org/](https://www.haskellstack.org/)) where possible. [`stack` does not currently support `ARM64`](https://github.com/commercialhaskell/stack/issues/2103) so is not included for that processor architecture.
 
-Note: The GHC developers do not support legacy release branches (i.e. `7.8.x`). While older GHC release tags are available in this DockerHub repository, only the two most recent minor releases will receive updates or be shown in the "Supported tags ..." section at the top of this page.
+ARM64 support is new and should be considered experimental at this stage. Support has been added as of `8.10.7`, `9.0.2` and `9.2.1`.
+
+Note: The GHC developers do not support legacy release branches (i.e. `7.8.x`). Only the two most recent minor releases will receive updates or be shown in the "Supported tags ..." section at the top of this page.
 
 Additionally, we aim to support the two most recent versions of Debian (`stable` and `oldstable`) as variants, with the most recent being the default if not specified.
 
@@ -151,6 +159,24 @@ Selected mirror https://s3.amazonaws.com/hackage.fpcomplete.com/
 ```
 
 The alternative to use `--install-ghc` doesn't make sense in a Docker image context, and hence the global `install-ghc` flag has been set to `false` (as of `haskell:8.2.2` & `haskell:8.4.3`) to avoid the default behavior of bootstrapping a new GHC in the container.
+
+# Image Variants
+
+The `haskell` images come in many flavors, each designed for a specific use case.
+
+## `haskell:<version>`
+
+This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
+
+Some of these tags may have names like buster in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
+
+This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
+
+## `haskell:<version>-slim`
+
+This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to run `ghc`, `cabal-install` and `stack`. In addition, [profiling support](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/profiling.html) is not included which saves ~ 700MB of space.
+
+If image size is of concern, we recommend using the slim images.
 
 # License
 

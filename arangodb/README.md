@@ -20,12 +20,13 @@ WARNING:
 	[ArangoDB](https://github.com/arangodb/arangodb-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.7`, `3.7.15`](https://github.com/arangodb/arangodb-docker/blob/d46dfa818833436aa89907a045c803de84c7868a/alpine/3.7.15/Dockerfile)
--	[`3.8`, `3.8.2`, `latest`](https://github.com/arangodb/arangodb-docker/blob/d46dfa818833436aa89907a045c803de84c7868a/alpine/3.8.2/Dockerfile)
+-	[`3.8`, `3.8.8`](https://github.com/arangodb/arangodb-docker/blob/6e5a02cd7f5106076a1faf24360218c3e2ca3003/alpine/3.8.8/Dockerfile)
+-	[`3.9`, `3.9.5`](https://github.com/arangodb/arangodb-docker/blob/1f70897e99b1c2de37d5763bbe4637d4fc9dfec9/alpine/3.9.5/Dockerfile)
+-	[`3.10`, `3.10.1`, `latest`](https://github.com/arangodb/arangodb-docker/blob/4f04df410807f42cb2be282b8143405ce5593bbc/alpine/3.10.1/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -33,7 +34,7 @@ WARNING:
 	[https://github.com/arangodb/arangodb-docker/issues](https://github.com/arangodb/arangodb-docker/issues)
 
 -	**Supported architectures**: ([more info](https://github.com/docker-library/official-images#architectures-other-than-amd64))  
-	[`amd64`](https://hub.docker.com/r/amd64/arangodb/)
+	[`amd64`](https://hub.docker.com/r/amd64/arangodb/), [`arm64v8`](https://hub.docker.com/r/arm64v8/arangodb/)
 
 -	**Published image artifact details**:  
 	[repo-info repo's `repos/arangodb/` directory](https://github.com/docker-library/repo-info/blob/master/repos/arangodb) ([history](https://github.com/docker-library/repo-info/commits/master/repos/arangodb))  

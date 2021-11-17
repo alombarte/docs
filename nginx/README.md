@@ -20,18 +20,18 @@ WARNING:
 	[the NGINX Docker Maintainers](https://github.com/nginxinc/docker-nginx)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.21.4`, `mainline`, `1`, `1.21`, `latest`](https://github.com/nginxinc/docker-nginx/blob/ef8e9912a2de9b51ce9d1f79a5c047eb48b05fc1/mainline/debian/Dockerfile)
--	[`1.21.4-perl`, `mainline-perl`, `1-perl`, `1.21-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/ef8e9912a2de9b51ce9d1f79a5c047eb48b05fc1/mainline/debian-perl/Dockerfile)
--	[`1.21.4-alpine`, `mainline-alpine`, `1-alpine`, `1.21-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/57f73af83954482c647ac32724a5408bcfc1e7fd/mainline/alpine/Dockerfile)
--	[`1.21.4-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.21-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/57f73af83954482c647ac32724a5408bcfc1e7fd/mainline/alpine-perl/Dockerfile)
--	[`1.20.2`, `stable`, `1.20`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/debian/Dockerfile)
--	[`1.20.2-perl`, `stable-perl`, `1.20-perl`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/debian-perl/Dockerfile)
--	[`1.20.2-alpine`, `stable-alpine`, `1.20-alpine`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/alpine/Dockerfile)
--	[`1.20.2-alpine-perl`, `stable-alpine-perl`, `1.20-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/b0e153a1b644ca8b2bd378b14913fff316e07cf2/stable/alpine-perl/Dockerfile)
+-	[`1.23.2`, `mainline`, `1`, `1.23`, `latest`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/debian/Dockerfile)
+-	[`1.23.2-perl`, `mainline-perl`, `1-perl`, `1.23-perl`, `perl`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/debian-perl/Dockerfile)
+-	[`1.23.2-alpine`, `mainline-alpine`, `1-alpine`, `1.23-alpine`, `alpine`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/alpine/Dockerfile)
+-	[`1.23.2-alpine-perl`, `mainline-alpine-perl`, `1-alpine-perl`, `1.23-alpine-perl`, `alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/alpine-perl/Dockerfile)
+-	[`1.22.1`, `stable`, `1.22`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/stable/debian/Dockerfile)
+-	[`1.22.1-perl`, `stable-perl`, `1.22-perl`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/stable/debian-perl/Dockerfile)
+-	[`1.22.1-alpine`, `stable-alpine`, `1.22-alpine`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/stable/alpine/Dockerfile)
+-	[`1.22.1-alpine-perl`, `stable-alpine-perl`, `1.22-alpine-perl`](https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/stable/alpine-perl/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -164,7 +164,7 @@ This behavior can be changed via the following environment variables:
 
 ## Running nginx in read-only mode
 
-To run nginx in read-only mode, you will need to mount a Docker volume to every location where nginx writes information. The default nginx configuration requires write access to `/var/cache` and `/var/run`. This can be easily accomplished by running nginx as follows:
+To run nginx in read-only mode, you will need to mount a Docker volume to every location where nginx writes information. The default nginx configuration requires write access to `/var/cache/nginx` and `/var/run`. This can be easily accomplished by running nginx as follows:
 
 ```console
 $ docker run -d -p 80:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run nginx
@@ -235,16 +235,6 @@ http {
 ```
 
 Alternatively, check out the official [Docker NGINX unprivileged image](https://hub.docker.com/r/nginxinc/nginx-unprivileged).
-
-## Monitoring nginx with Amplify
-
-[Amplify](https://amplify.nginx.com/signup/) is a free monitoring tool that can be used to monitor microservice architectures based on nginx. Amplify is developed and maintained by the company behind the nginx software.
-
-With Amplify it is possible to collect and aggregate metrics across containers, and present a coherent set of visualizations of the key performance data, such as active connections or requests per second. It is also easy to quickly check for any performance degradations, traffic anomalies, and get a deeper insight into the nginx configuration in general.
-
-In order to use Amplify, a small Python-based agent software (Amplify Agent) should be [installed](https://github.com/nginxinc/docker-nginx-amplify) inside the container.
-
-For more information about Amplify, please check the official documentation [here](https://github.com/nginxinc/nginx-amplify-doc).
 
 # Image Variants
 

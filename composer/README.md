@@ -20,12 +20,14 @@ WARNING:
 	[Rob Bast](https://github.com/alcohol), with [contributions](https://github.com/composer/docker/graphs/contributors) from the community.
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`2.1.12`, `2.1`, `2`, `latest`](https://github.com/composer/docker/blob/b6cee8bbf062f78dda9f6d784e4e7b64e030748c/2.1/Dockerfile)
--	[`1.10.23`, `1.10`, `1`](https://github.com/composer/docker/blob/f026ed9f89c88c726cb6fc3b34f3e677bc232a2e/1.10/Dockerfile)
+-	[`2.4.4`, `2.4`, `2`, `latest`](https://github.com/composer/docker/blob/9f1f0e2f42f8a525b4b0ba3b2f33429fae7d07bf/2.4/Dockerfile)
+-	[`2.3.10`, `2.3`](https://github.com/composer/docker/blob/f330335b9cf25f09b0870a7556c79cf62b018953/2.3/Dockerfile)
+-	[`2.2.18`, `2.2`](https://github.com/composer/docker/blob/aac1ec40922d76283547e15dfb5aac82802a24d4/2.2/Dockerfile)
+-	[`1.10.26`, `1.10`, `1`](https://github.com/composer/docker/blob/8dff639787c5813b916cd43c1543a6e987f1115b/1.10/Dockerfile)
 
 # Quick reference (cont.)
 

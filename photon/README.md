@@ -20,14 +20,13 @@ WARNING:
 	[VMware](https://github.com/vmware/photon-docker-image)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.0`, `4.0-20211112`, `latest`](https://github.com/vmware/photon-docker-image/blob/6e5f8985ee8c59ab061e8098612f6f3335359327/docker/Dockerfile)
--	[`3.0`, `3.0-20211105`](https://github.com/vmware/photon-docker-image/blob/85635c4557b95a12ab72d947033399e4fb7a795f/docker/Dockerfile)
--	[`1.0`, `1.0-20211112`](https://github.com/vmware/photon-docker-image/blob/b56a7f23378fc42db600ff8d0a342142b3115986/docker/Dockerfile)
--	[`2.0`, `2.0-20211112`](https://github.com/vmware/photon-docker-image/blob/d7f17a431bfc3a8b200c19d2f73a28242d470405/docker/Dockerfile)
+-	[`4.0`, `4.0-20221105`, `latest`](https://github.com/vmware/photon-docker-image/blob/55f5c60bc98e170b750af406a1a89adc2b452a4d/docker/Dockerfile)
+-	[`3.0`, `3.0-20221029`](https://github.com/vmware/photon-docker-image/blob/3f48db06f0175f69ecf27b83bde32410af466fed/docker/Dockerfile)
+-	[`2.0`, `2.0-20221029`](https://github.com/vmware/photon-docker-image/blob/64d495744276da80fd53750146350e41d435ff79/docker/Dockerfile)
 
 # Quick reference (cont.)
 

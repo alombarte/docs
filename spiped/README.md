@@ -20,12 +20,12 @@ WARNING:
 	[Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-spiped), [with Colin's support (from spiped upstream)](https://github.com/docker-library/official-images/pull/1714#issuecomment-219556607)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.6.1`, `1.6`, `1`, `latest`](https://github.com/TimWolla/docker-spiped/blob/bec455b320f878b386328c2db0cb9a6ca9fd7755/1.6/Dockerfile)
--	[`1.6.1-alpine`, `1.6-alpine`, `1-alpine`, `alpine`](https://github.com/TimWolla/docker-spiped/blob/f97eba885ee67cd0d8a32f4e70ab5388bb77944f/1.6/alpine/Dockerfile)
+-	[`1.6.2`, `1.6`, `1`, `latest`](https://github.com/TimWolla/docker-spiped/blob/2673ea4c6a442d939ab23834aaf2a64c5d916139/1.6/Dockerfile)
+-	[`1.6.2-alpine`, `1.6-alpine`, `1-alpine`, `alpine`](https://github.com/TimWolla/docker-spiped/blob/c0000087551ed7f73836d04733b54923c7ccb468/1.6/alpine/Dockerfile)
 
 # Quick reference (cont.)
 

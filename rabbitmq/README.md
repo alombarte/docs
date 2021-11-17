@@ -20,18 +20,22 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/rabbitmq)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`3.9.9`, `3.9`, `3`, `latest`](https://github.com/docker-library/rabbitmq/blob/d38e983d2cf8246046b6dac396d9483c72231223/3.9/ubuntu/Dockerfile)
--	[`3.9.9-management`, `3.9-management`, `3-management`, `management`](https://github.com/docker-library/rabbitmq/blob/b07819f873e5a68b2bb54e01f0caa41c26b277f3/3.9/ubuntu/management/Dockerfile)
--	[`3.9.9-alpine`, `3.9-alpine`, `3-alpine`, `alpine`](https://github.com/docker-library/rabbitmq/blob/d38e983d2cf8246046b6dac396d9483c72231223/3.9/alpine/Dockerfile)
--	[`3.9.9-management-alpine`, `3.9-management-alpine`, `3-management-alpine`, `management-alpine`](https://github.com/docker-library/rabbitmq/blob/b07819f873e5a68b2bb54e01f0caa41c26b277f3/3.9/alpine/management/Dockerfile)
--	[`3.8.25`, `3.8`](https://github.com/docker-library/rabbitmq/blob/78df7f9ed67fbd7fd6d50969d49a1ad72c45dd05/3.8/ubuntu/Dockerfile)
--	[`3.8.25-management`, `3.8-management`](https://github.com/docker-library/rabbitmq/blob/0d1c84a50aa69305b2fa3e98632a206d3d2a3f9f/3.8/ubuntu/management/Dockerfile)
--	[`3.8.25-alpine`, `3.8-alpine`](https://github.com/docker-library/rabbitmq/blob/78df7f9ed67fbd7fd6d50969d49a1ad72c45dd05/3.8/alpine/Dockerfile)
--	[`3.8.25-management-alpine`, `3.8-management-alpine`](https://github.com/docker-library/rabbitmq/blob/0d1c84a50aa69305b2fa3e98632a206d3d2a3f9f/3.8/alpine/management/Dockerfile)
+-	[`3.11.3`, `3.11`, `3`, `latest`](https://github.com/docker-library/rabbitmq/blob/25e6264d4e6029a042e88843b10fcc60c80652c8/3.11/ubuntu/Dockerfile)
+-	[`3.11.3-management`, `3.11-management`, `3-management`, `management`](https://github.com/docker-library/rabbitmq/blob/65eb19295b7975c4614d6071fb3fc6a1b86282a1/3.11/ubuntu/management/Dockerfile)
+-	[`3.11.3-alpine`, `3.11-alpine`, `3-alpine`, `alpine`](https://github.com/docker-library/rabbitmq/blob/25e6264d4e6029a042e88843b10fcc60c80652c8/3.11/alpine/Dockerfile)
+-	[`3.11.3-management-alpine`, `3.11-management-alpine`, `3-management-alpine`, `management-alpine`](https://github.com/docker-library/rabbitmq/blob/65eb19295b7975c4614d6071fb3fc6a1b86282a1/3.11/alpine/management/Dockerfile)
+-	[`3.10.11`, `3.10`](https://github.com/docker-library/rabbitmq/blob/2d633b92e36b492f9c256948269f8fbed622f769/3.10/ubuntu/Dockerfile)
+-	[`3.10.11-management`, `3.10-management`](https://github.com/docker-library/rabbitmq/blob/6e226fe8e99702c8726d5e7d5c5864e69548048d/3.10/ubuntu/management/Dockerfile)
+-	[`3.10.11-alpine`, `3.10-alpine`](https://github.com/docker-library/rabbitmq/blob/2d633b92e36b492f9c256948269f8fbed622f769/3.10/alpine/Dockerfile)
+-	[`3.10.11-management-alpine`, `3.10-management-alpine`](https://github.com/docker-library/rabbitmq/blob/6e226fe8e99702c8726d5e7d5c5864e69548048d/3.10/alpine/management/Dockerfile)
+-	[`3.9.25`, `3.9`](https://github.com/docker-library/rabbitmq/blob/9a7af4b06a712d387b1a944e9d98913aa224c9e2/3.9/ubuntu/Dockerfile)
+-	[`3.9.25-management`, `3.9-management`](https://github.com/docker-library/rabbitmq/blob/b07819f873e5a68b2bb54e01f0caa41c26b277f3/3.9/ubuntu/management/Dockerfile)
+-	[`3.9.25-alpine`, `3.9-alpine`](https://github.com/docker-library/rabbitmq/blob/9a7af4b06a712d387b1a944e9d98913aa224c9e2/3.9/alpine/Dockerfile)
+-	[`3.9.25-management-alpine`, `3.9-management-alpine`](https://github.com/docker-library/rabbitmq/blob/b07819f873e5a68b2bb54e01f0caa41c26b277f3/3.9/alpine/management/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -106,6 +110,24 @@ RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT
 RABBITMQ_SSL_KEYFILE
 RABBITMQ_SSL_VERIFY
 RABBITMQ_VM_MEMORY_HIGH_WATERMARK
+```
+
+### Setting default user and password
+
+If you wish to change the default username and password of `guest` / `guest`, you can do so with the `RABBITMQ_DEFAULT_USER` and `RABBITMQ_DEFAULT_PASS` environmental variables. These variables were available previously in the docker-specific entrypoint shell script but are now available in RabbitMQ directly.
+
+```console
+$ docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=password rabbitmq:3-management
+```
+
+You can then go to `http://localhost:8080` or `http://host-ip:8080` in a browser and use `user`/`password` to gain access to the management console
+
+### Setting default vhost
+
+If you wish to change the default vhost, you can do so with the `RABBITMQ_DEFAULT_VHOST` environmental variables:
+
+```console
+$ docker run -d --hostname my-rabbit --name some-rabbit -e RABBITMQ_DEFAULT_VHOST=my_vhost rabbitmq:3-management
 ```
 
 ### Memory Limits

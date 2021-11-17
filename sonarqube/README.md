@@ -24,16 +24,16 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`8.9.3-community`, `8.9-community`, `8-community`, `lts`, `lts-community`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/8/community/Dockerfile)
--	[`8.9.3-developer`, `8.9-developer`, `8-developer`, `lts-developer`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/8/developer/Dockerfile)
--	[`8.9.3-enterprise`, `8.9-enterprise`, `8-enterprise`, `lts-enterprise`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/8/enterprise/Dockerfile)
--	[`8.9.3-datacenter-app`, `8.9-datacenter-app`, `8-datacenter-app`, `lts-datacenter-app`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/8/datacenter/app/Dockerfile)
--	[`8.9.3-datacenter-search`, `8.9-datacenter-search`, `8-datacenter-search`, `lts-datacenter-search`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/8/datacenter/search/Dockerfile)
--	[`9.1.0-community`, `9.1-community`, `9-community`, `community`, `latest`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/9/community/Dockerfile)
--	[`9.1.0-developer`, `9.1-developer`, `9-developer`, `developer`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/9/developer/Dockerfile)
--	[`9.1.0-enterprise`, `9.1-enterprise`, `9-enterprise`, `enterprise`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/9/enterprise/Dockerfile)
--	[`9.1.0-datacenter-app`, `9.1-datacenter-app`, `9-datacenter-app`, `datacenter-app`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/9/datacenter/app/Dockerfile)
--	[`9.1.0-datacenter-search`, `9.1-datacenter-search`, `9-datacenter-search`, `datacenter-search`](https://github.com/SonarSource/docker-sonarqube/blob/d936652c0ebf0975b5765e45f0c434ed7bd150f4/9/datacenter/search/Dockerfile)
+-	[`8.9.10-community`, `8.9-community`, `8-community`, `lts`, `lts-community`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/8/community/Dockerfile)
+-	[`8.9.10-developer`, `8.9-developer`, `8-developer`, `lts-developer`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/8/developer/Dockerfile)
+-	[`8.9.10-enterprise`, `8.9-enterprise`, `8-enterprise`, `lts-enterprise`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/8/enterprise/Dockerfile)
+-	[`8.9.10-datacenter-app`, `8.9-datacenter-app`, `8-datacenter-app`, `lts-datacenter-app`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/8/datacenter/app/Dockerfile)
+-	[`8.9.10-datacenter-search`, `8.9-datacenter-search`, `8-datacenter-search`, `lts-datacenter-search`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/8/datacenter/search/Dockerfile)
+-	[`9.7.1-community`, `9.7-community`, `9-community`, `community`, `latest`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/9/community/Dockerfile)
+-	[`9.7.1-developer`, `9.7-developer`, `9-developer`, `developer`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/9/developer/Dockerfile)
+-	[`9.7.1-enterprise`, `9.7-enterprise`, `9-enterprise`, `enterprise`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/9/enterprise/Dockerfile)
+-	[`9.7.1-datacenter-app`, `9.7-datacenter-app`, `9-datacenter-app`, `datacenter-app`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/9/datacenter/app/Dockerfile)
+-	[`9.7.1-datacenter-search`, `9.7-datacenter-search`, `9-datacenter-search`, `datacenter-search`](https://github.com/SonarSource/docker-sonarqube/blob/8049db7a75d1f5bbf78c32fe22a1ec67a8077a63/9/datacenter/search/Dockerfile)
 
 # Quick reference (cont.)
 

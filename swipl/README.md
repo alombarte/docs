@@ -20,12 +20,12 @@ WARNING:
 	[the SWI-Prolog community](https://github.com/SWI-Prolog/docker-swipl)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`latest`, `8.3.29`](https://github.com/SWI-Prolog/docker-swipl/blob/ca3e88bd44217c3effa881d30b19d7eb1ec1260a/8.3.29/stretch/Dockerfile)
--	[`stable`, `8.4.0`](https://github.com/SWI-Prolog/docker-swipl/blob/ca3e88bd44217c3effa881d30b19d7eb1ec1260a/8.4.0/stretch/Dockerfile)
+-	[`latest`, `8.5.20`](https://github.com/SWI-Prolog/docker-swipl/blob/c4ca1b9ddd9c416ad22c3775d82921c1a2b69c2b/8.5.20/bullseye/Dockerfile)
+-	[`stable`, `8.4.2`](https://github.com/SWI-Prolog/docker-swipl/blob/c4ca1b9ddd9c416ad22c3775d82921c1a2b69c2b/8.4.2/bullseye/Dockerfile)
 
 # Quick reference (cont.)
 

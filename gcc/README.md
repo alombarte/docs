@@ -20,14 +20,14 @@ WARNING:
 	[the Docker Community](https://github.com/docker-library/gcc)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`11.2.0`, `11.2`, `11`, `latest`, `11.2.0-bullseye`, `11.2-bullseye`, `11-bullseye`, `bullseye`](https://github.com/docker-library/gcc/blob/c2c4e3ac9245fa9e5789512969cf3209e0c56136/11/Dockerfile)
--	[`10.3.0`, `10.3`, `10`, `10.3.0-buster`, `10.3-buster`, `10-buster`](https://github.com/docker-library/gcc/blob/a49434c14bb5fd8aa7d1d66b366195bbafea4e7e/10/Dockerfile)
--	[`9.4.0`, `9.4`, `9`, `9.4.0-buster`, `9.4-buster`, `9-buster`](https://github.com/docker-library/gcc/blob/a49434c14bb5fd8aa7d1d66b366195bbafea4e7e/9/Dockerfile)
--	[`8.5.0`, `8.5`, `8`, `8.5.0-buster`, `8.5-buster`, `8-buster`](https://github.com/docker-library/gcc/blob/a49434c14bb5fd8aa7d1d66b366195bbafea4e7e/8/Dockerfile)
+-	[`12.2.0`, `12.2`, `12`, `latest`, `12.2.0-bullseye`, `12.2-bullseye`, `12-bullseye`, `bullseye`](https://github.com/docker-library/gcc/blob/523e01b2ccf43f1fd702aa9fdc2f71c827b76525/12/Dockerfile)
+-	[`11.3.0`, `11.3`, `11`, `11.3.0-bullseye`, `11.3-bullseye`, `11-bullseye`](https://github.com/docker-library/gcc/blob/a5a94a2d5c812fe57f6f28713b0f899b879145d3/11/Dockerfile)
+-	[`10.4.0`, `10.4`, `10`, `10.4.0-buster`, `10.4-buster`, `10-buster`](https://github.com/docker-library/gcc/blob/1e3174f36d64a3ce1373a7004a7f0d4f98de307b/10/Dockerfile)
+-	[`9.5.0`, `9.5`, `9`, `9.5.0-buster`, `9.5-buster`, `9-buster`](https://github.com/docker-library/gcc/blob/6c40a41a202b2996b26b52e94762fe9aa8830766/9/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -93,7 +93,7 @@ $ docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:4.9 make
 
 # License
 
-View [license information](https://gcc.gnu.org/viewcvs/gcc/trunk/gcc/COPYING3?view=markup) for the software contained in this image.
+View [license information](https://gcc.gnu.org/onlinedocs/gcc-11.2.0/gcc/Copying.html) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
