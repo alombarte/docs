@@ -17,20 +17,19 @@ WARNING:
 # Quick reference
 
 -	**Maintained by**:  
-	[Canonical](https://launchpad.net/cloud-images) and [Tianon (Debian Developer)](https://github.com/tianon/docker-brew-ubuntu-core)
+	[Canonical](https://launchpad.net/cloud-images) and [Tianon (Debian Developer)](https://git.launchpad.net/cloud-images/+oci/ubuntu-base)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`18.04`, `bionic-20210930`, `bionic`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/bionic/Dockerfile)
--	[`20.04`, `focal-20211006`, `focal`, `latest`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/focal/Dockerfile)
--	[`21.04`, `hirsute-20210917`, `hirsute`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/hirsute/Dockerfile)
--	[`21.10`, `impish-20211102`, `impish`, `rolling`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/impish/Dockerfile)
--	[`22.04`, `jammy-20211029`, `jammy`, `devel`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/jammy/Dockerfile)
--	[`14.04`, `trusty-20191217`, `trusty`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/trusty/Dockerfile)
--	[`16.04`, `xenial-20210804`, `xenial`](https://github.com/tianon/docker-brew-ubuntu-core/blob/7b4824918e0284728bc03358f7a2e399a1c74035/xenial/Dockerfile)
+-	[`18.04`, `bionic-20221019`, `bionic`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-bionic-amd64-20221019&id=351306c6043bd360b94781a7db9fcb2ea1d2ff23)
+-	[`20.04`, `focal-20221019`, `focal`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-focal-amd64-20221019&id=7f6cfb71524baae0a1019f2c7b2530dff2d40c6e)
+-	[`22.04`, `jammy-20221101`, `jammy`, `latest`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-jammy-amd64-20221101&id=94ab0c78ee1594e0ef5daa7a191edc55d69385db)
+-	[`22.10`, `kinetic-20221101`, `kinetic`, `rolling`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-kinetic-amd64-20221101&id=689d32e4ae40ee1b818aedf9ec07e938e9e4ba11)
+-	[`14.04`, `trusty-20191217`, `trusty`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-trusty-amd64-20191217&id=131f6d8ad3ff6875f210766c88b463f96992b5ab)
+-	[`16.04`, `xenial-20210804`, `xenial`](https://git.launchpad.net/cloud-images/+oci/ubuntu-base/tree/Dockerfile?h=refs/tags/dist-xenial-amd64-20210804&id=45e83e2e11f641ba2fea381e705ededbd2778f16)
 
 # Quick reference (cont.)
 
@@ -63,7 +62,7 @@ Development of Ubuntu is led by Canonical Ltd. Canonical generates revenue throu
 
 # What's in this image?
 
-This image is built from official rootfs tarballs provided by Canonical (specifically, https://partner-images.canonical.com/oci/ for Bionic and later and https://partner-images.canonical.com/core/ for older releases).
+This image is built from official rootfs tarballs provided by Canonical (see `dist-*` tags at https://git.launchpad.net/cloud-images/+oci/ubuntu-base).
 
 The `ubuntu:latest` tag points to the "latest LTS", since that's the version recommended for general use. The `ubuntu:rolling` tag points to the latest release (regardless of LTS status).
 
@@ -83,7 +82,13 @@ ENV LANG en_US.utf8
 
 # How is the rootfs built?
 
-The [tarballs published by Canonical](https://partner-images.canonical.com/oci/) are built from scripts that live in [the livecd-rootfs project](https://code.launchpad.net/~ubuntu-core-dev/livecd-rootfs/+git/livecd-rootfs/+ref/ubuntu/master), especially `live-build/auto/build`.
+The tarballs published by Canonical, referenced by `dist-*` tags in https://git.launchpad.net/cloud-images/+oci/ubuntu-base Git repository, are built from scripts that live in [the livecd-rootfs project](https://code.launchpad.net/~ubuntu-core-dev/livecd-rootfs/+git/livecd-rootfs/+ref/ubuntu/master), especially `live-build/auto/build`. The builds are run on Launchpad. For build history see `livefs` build pages of individual releases on Launchpad:
+
+-	[Bionic](https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/bionic/ubuntu-oci)
+-	[Focal](https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/focal/ubuntu-oci)
+-	[Jammy](https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/jammy/ubuntu-oci)
+-	[Kinetic](https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/kinetic/ubuntu-oci)
+-	[Lunar](https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/lunar/ubuntu-oci)
 
 # License
 

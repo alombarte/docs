@@ -20,7 +20,7 @@ WARNING:
 	[Tianon (of the Docker Project)](https://github.com/docker-library/docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
@@ -28,16 +28,27 @@ WARNING:
 
 ## Simple Tags
 
--	[`20.10.10`, `20.10`, `20`, `latest`, `20.10.10-alpine3.14`](https://github.com/docker-library/docker/blob/59df8d0091036d190e92334f3fd8ccaee3bafa0b/20.10/Dockerfile)
--	[`20.10.10-dind`, `20.10-dind`, `20-dind`, `dind`, `20.10.10-dind-alpine3.14`](https://github.com/docker-library/docker/blob/8baa881aab85f8398d2edbbcc0da4bd1f556dd98/20.10/dind/Dockerfile)
--	[`20.10.10-dind-rootless`, `20.10-dind-rootless`, `20-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/59df8d0091036d190e92334f3fd8ccaee3bafa0b/20.10/dind-rootless/Dockerfile)
--	[`20.10.10-git`, `20.10-git`, `20-git`, `git`](https://github.com/docker-library/docker/blob/387e351394bfad74bceebf8303c6c8e39c3d4ed4/20.10/git/Dockerfile)
--	[`20.10.10-windowsservercore-1809`, `20.10-windowsservercore-1809`, `20-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/docker-library/docker/blob/59df8d0091036d190e92334f3fd8ccaee3bafa0b/20.10/windows/windowsservercore-1809/Dockerfile)
+-	[`22.06.0-beta.0-cli`, `22.06-rc-cli`, `rc-cli`, `22.06.0-beta.0-cli-alpine3.16`](https://github.com/docker-library/docker/blob/6028daf0c4c6f93606e961346ca1cf8226745312/22.06-rc/cli/Dockerfile)
+-	[`22.06.0-beta.0-dind`, `22.06-rc-dind`, `rc-dind`, `22.06.0-beta.0-dind-alpine3.16`, `22.06.0-beta.0`, `22.06-rc`, `rc`, `22.06.0-beta.0-alpine3.16`](https://github.com/docker-library/docker/blob/fbd3c1d965c8587efde1bef2d31459e54c28372e/22.06-rc/dind/Dockerfile)
+-	[`22.06.0-beta.0-dind-rootless`, `22.06-rc-dind-rootless`, `rc-dind-rootless`](https://github.com/docker-library/docker/blob/1f37025ef2b9b70706d8e11cc3552830e4524758/22.06-rc/dind-rootless/Dockerfile)
+-	[`22.06.0-beta.0-git`, `22.06-rc-git`, `rc-git`](https://github.com/docker-library/docker/blob/f23a2bea97f6d7ec563bc316302fb8edf620ec5b/22.06-rc/git/Dockerfile)
+-	[`22.06.0-beta.0-windowsservercore-ltsc2022`, `22.06-rc-windowsservercore-ltsc2022`, `rc-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/4c1b73e7046422ca1339b76935c2e2f4251b9c20/22.06-rc/windows/windowsservercore-ltsc2022/Dockerfile)
+-	[`22.06.0-beta.0-windowsservercore-1809`, `22.06-rc-windowsservercore-1809`, `rc-windowsservercore-1809`](https://github.com/docker-library/docker/blob/4c1b73e7046422ca1339b76935c2e2f4251b9c20/22.06-rc/windows/windowsservercore-1809/Dockerfile)
+-	[`20.10.21-cli`, `20.10-cli`, `20-cli`, `cli`, `20.10.21-cli-alpine3.16`, `20.10.21`, `20.10`, `20`, `latest`, `20.10.21-alpine3.16`](https://github.com/docker-library/docker/blob/6028daf0c4c6f93606e961346ca1cf8226745312/20.10/cli/Dockerfile)
+-	[`20.10.21-dind`, `20.10-dind`, `20-dind`, `dind`, `20.10.21-dind-alpine3.16`](https://github.com/docker-library/docker/blob/75036d19c3d68de7d20277d707763f32ddd487aa/20.10/dind/Dockerfile)
+-	[`20.10.21-dind-rootless`, `20.10-dind-rootless`, `20-dind-rootless`, `dind-rootless`](https://github.com/docker-library/docker/blob/1231bb8e025bdc715b8a8ca122ad20b5cf7ee469/20.10/dind-rootless/Dockerfile)
+-	[`20.10.21-git`, `20.10-git`, `20-git`, `git`](https://github.com/docker-library/docker/blob/f23a2bea97f6d7ec563bc316302fb8edf620ec5b/20.10/git/Dockerfile)
+-	[`20.10.21-windowsservercore-ltsc2022`, `20.10-windowsservercore-ltsc2022`, `20-windowsservercore-ltsc2022`, `windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/1231bb8e025bdc715b8a8ca122ad20b5cf7ee469/20.10/windows/windowsservercore-ltsc2022/Dockerfile)
+-	[`20.10.21-windowsservercore-1809`, `20.10-windowsservercore-1809`, `20-windowsservercore-1809`, `windowsservercore-1809`](https://github.com/docker-library/docker/blob/1231bb8e025bdc715b8a8ca122ad20b5cf7ee469/20.10/windows/windowsservercore-1809/Dockerfile)
 
 ## Shared Tags
 
--	`20.10.10-windowsservercore`, `20.10-windowsservercore`, `20-windowsservercore`, `windowsservercore`:
-	-	[`20.10.10-windowsservercore-1809`](https://github.com/docker-library/docker/blob/59df8d0091036d190e92334f3fd8ccaee3bafa0b/20.10/windows/windowsservercore-1809/Dockerfile)
+-	`22.06.0-beta.0-windowsservercore`, `22.06-rc-windowsservercore`, `rc-windowsservercore`:
+	-	[`22.06.0-beta.0-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/4c1b73e7046422ca1339b76935c2e2f4251b9c20/22.06-rc/windows/windowsservercore-ltsc2022/Dockerfile)
+	-	[`22.06.0-beta.0-windowsservercore-1809`](https://github.com/docker-library/docker/blob/4c1b73e7046422ca1339b76935c2e2f4251b9c20/22.06-rc/windows/windowsservercore-1809/Dockerfile)
+-	`20.10.21-windowsservercore`, `20.10-windowsservercore`, `20-windowsservercore`, `windowsservercore`:
+	-	[`20.10.21-windowsservercore-ltsc2022`](https://github.com/docker-library/docker/blob/1231bb8e025bdc715b8a8ca122ad20b5cf7ee469/20.10/windows/windowsservercore-ltsc2022/Dockerfile)
+	-	[`20.10.21-windowsservercore-1809`](https://github.com/docker-library/docker/blob/1231bb8e025bdc715b8a8ca122ad20b5cf7ee469/20.10/windows/windowsservercore-1809/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -312,12 +323,7 @@ This is the defacto image. If you are unsure about what your needs are, you prob
 
 ## `docker:<version>-windowsservercore`
 
-This image is based on [Windows Server Core (`microsoft/windowsservercore`)](https://hub.docker.com/r/microsoft/windowsservercore/). As such, it only works in places which that image does, such as Windows 10 Professional/Enterprise (Anniversary Edition) or Windows Server 2016.
-
-For information about how to get Docker running on Windows, please see the relevant "Quick Start" guide provided by Microsoft:
-
--	[Windows Server Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_server)
--	[Windows 10 Quick Start](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/quick_start/quick_start_windows_10)
+Unfortunately, Windows does not support nested containers, so this image variant only contains the client (intended for use against an existing Docker engine, ala `-v //./pipe/docker_engine://./pipe/docker_engine`).
 
 # License
 

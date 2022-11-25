@@ -20,15 +20,14 @@ WARNING:
 	[HashiCorp](https://github.com/hashicorp/docker-vault)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.9.0-rc1`](https://github.com/hashicorp/docker-vault/blob/f65e9fbd0d9c9a1ab252c8198bd2b9564b1f3781/0.X/Dockerfile)
--	[`1.8.5`, `latest`](https://github.com/hashicorp/docker-vault/blob/77381744d293b587196423acc6dca5ee4d5898da/0.X/Dockerfile)
--	[`1.7.6`](https://github.com/hashicorp/docker-vault/blob/d2517c6df4eef9002087e09bb8047283709a508f/0.X/Dockerfile)
--	[`1.6.7`](https://github.com/hashicorp/docker-vault/blob/ee3213df631000172da382184a516a72a7266b76/0.X/Dockerfile)
--	[`1.5.9`](https://github.com/hashicorp/docker-vault/blob/72a3539fd91085b2d51cfc87cd9bcf0804e3a5cf/0.X/Dockerfile)
+-	[`1.12.1`, `latest`](https://github.com/hashicorp/docker-vault/blob/738419f75ead59e70fc11025993a80e711947cb0/0.X/Dockerfile)
+-	[`1.11.5`](https://github.com/hashicorp/docker-vault/blob/c40d9806ed24a8d0088cd45ee69f68dd86d27704/0.X/Dockerfile)
+-	[`1.10.8`](https://github.com/hashicorp/docker-vault/blob/26e7bfc4f44e0907587ef269bed7f5331fc35179/0.X/Dockerfile)
+-	[`1.9.10`](https://github.com/hashicorp/docker-vault/blob/62322ee96a690b07cdc669eb9876fc05e073ff2c/0.X/Dockerfile)
 
 # Quick reference (cont.)
 

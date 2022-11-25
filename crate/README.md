@@ -24,14 +24,9 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.6.4`, `4.6`, `latest`](https://github.com/crate/docker-crate/blob/fc1f2a1d6eed496c144cd1c48dde0f85277fe55c/Dockerfile)
--	[`4.5.5`, `4.5`](https://github.com/crate/docker-crate/blob/53f8d6336816b88f09d831c073cab749762c7be6/Dockerfile)
--	[`4.4.3`, `4.4`](https://github.com/crate/docker-crate/blob/2ccc43c2b34cd4182b7757298f97dd21f123b2d9/Dockerfile)
--	[`4.3.4`, `4.3`](https://github.com/crate/docker-crate/blob/eae5f171ef089074d42d033af2988714a87190b6/Dockerfile)
--	[`4.2.7`, `4.2`](https://github.com/crate/docker-crate/blob/441cd8bb0115a268f30633839bc29d813dfaa0db/Dockerfile)
--	[`4.1.8`, `4.1`](https://github.com/crate/docker-crate/blob/fbe46a3c699dfe79242e659626a39b09325d58ab/Dockerfile)
--	[`4.0.12`, `4.0`](https://github.com/crate/docker-crate/blob/7791cda08fbf054ab2ce7a988f8811074b8c3bf4/Dockerfile)
--	[`3.3.5`, `3.3`](https://github.com/crate/docker-crate/blob/896c3f63e8e3d4746019e379a7aefb5225b050e3/Dockerfile)
+-	[`5.1.1`, `5.1`, `latest`](https://github.com/crate/docker-crate/blob/d8710e2efacb07b42d55c4cc99a4a772efc2dd2d/Dockerfile)
+-	[`5.0.3`, `5.0`](https://github.com/crate/docker-crate/blob/0b872eae2e0300879907405a8177be4418fe2a15/Dockerfile)
+-	[`4.8.4`, `4.8`](https://github.com/crate/docker-crate/blob/1389b454dc1478efcbde8f9846bdd8ac6f7f0f8a/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -52,7 +47,7 @@ WARNING:
 -	**Source of this description**:  
 	[docs repo's `crate/` directory](https://github.com/docker-library/docs/tree/master/crate) ([history](https://github.com/docker-library/docs/commits/master/crate))
 
-![logo](https://raw.githubusercontent.com/docker-library/docs/0d4ccc1c0a00a99c3302ffeb17831225cbba7863/crate/logo.png)
+![logo](https://raw.githubusercontent.com/docker-library/docs/774acf9bf99ca29eded5cd50f0ba3f755716673d/crate/logo.svg?sanitize=true)
 
 # What Is CrateDB?
 

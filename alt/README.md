@@ -20,13 +20,13 @@ WARNING:
 	[The ALT Linux Team Cloud](https://github.com/alt-cloud/docker-brew-alt)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`p10`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/1a75b1d52e2557c9661a3571c94010d9bed575f5/x86_64/Dockerfile)
--	[`p9`](https://github.com/alt-cloud/docker-brew-alt/blob/a7ea0d6982b84310d7dce8dcc6dc2d41e8b42be1/x86_64/Dockerfile)
--	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/7ed716e37ee5da61ea41588e454c326ce59ab06a/x86_64/Dockerfile)
+-	[`p10`, `latest`](https://github.com/alt-cloud/docker-brew-alt/blob/b231d221f40d951338c30902735044a36bb1895f/x86_64/Dockerfile)
+-	[`p9`](https://github.com/alt-cloud/docker-brew-alt/blob/fa873ac1d6ad83275982565b82b67b009969fd6a/x86_64/Dockerfile)
+-	[`sisyphus`](https://github.com/alt-cloud/docker-brew-alt/blob/a7155b68c43e43d50c162e355946303abf76f7d8/x86_64/Dockerfile)
 
 # Quick reference (cont.)
 

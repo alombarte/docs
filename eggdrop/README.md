@@ -20,13 +20,12 @@ WARNING:
 	[Eggheads (the Eggdrop community)](https://github.com/eggheads/eggdrop-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`develop`](https://github.com/eggheads/eggdrop-docker/blob/8d3bb9a0a2f35b45d50b82e9c7dd7a5af66e4c9a/develop/Dockerfile)
--	[`1.8`, `1.8.4`](https://github.com/eggheads/eggdrop-docker/blob/14411e45f599536a86d9f023c0fa09f3dd2f5454/1.8/Dockerfile)
--	[`1.9`, `1.9.1`, `stable`, `latest`](https://github.com/eggheads/eggdrop-docker/blob/eb6827278e290bc9ae5d443adfac3ca153d1c459/1.9/Dockerfile)
+-	[`develop`](https://github.com/eggheads/eggdrop-docker/blob/f0b84e42368f4174aaa8f41ba3708f9f5cb8774e/develop/Dockerfile)
+-	[`1.9`, `1.9.3`, `stable`, `latest`](https://github.com/eggheads/eggdrop-docker/blob/f0b84e42368f4174aaa8f41ba3708f9f5cb8774e/1.9/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -75,13 +74,13 @@ This variable sets the IRC server Eggdrop will connect to. Examples are:
 
 ```console
   -e SERVER=just.a.normal.server
-  -e SERVER=you.need.to.change.this:6667
-  -e SERVER=another.example.com:7000:password
-  -e SERVER=[2001:db8:618:5c0:263::]:6669:password
-  -e SERVER=ssl.example.net:+6697
+  -e SERVER="you.need.to.change.this 6667"
+  -e SERVER="another.example.com 7000 password"
+  -e SERVER="[2001:db8:618:5c0:263::] 6669 password"
+  -e SERVER="ssl.example.net +6697"
 ```
 
-Only one server can be specified via an environmental variable. The + denotes an SSL-enabled port. After the first run, it is advised to edit the eggdrop config directly to add additional servers (see Long-term Persistence below).
+Note that specifiying a port or password will require enclosing the entire argument within quotes. Only one server can be specified via an environmental variable. The + denotes an SSL-enabled port. After the first run, it is advised to edit the eggdrop config directly to add additional servers (see Long-term Persistence below).
 
 ### `NICK`
 
@@ -123,6 +122,14 @@ An easy way to add scripts would be to create a scripts directory on the host an
 
 to your docker run command line (and then edit your config file to load the scripts from the path that matches where you mounted the scripts dir). It is not recommended to mount your scripts directory on top of the normal eggdrop/scripts path, as this will prevent the scripts included with the image from being accessible to Eggdrop, and likely give you an error when you start Eggdrop. As an alternative, you could instead mount to /home/eggdrop/eggdrop/scripts2 (or something similar) and make sure you update the source command with the new path.
 
+## Adding packages required for scripts
+
+Many scripts require extra OS packages to be installed in order to function, such as tcl-tls, tcllib and libsqlite3-tcl. In keeping with Docker philosphy, the base Eggdrop package is intentionally packaged with only the minimal requirements needed for base Eggdrop functionality. However, users may easily add add packages when starting a container like this:
+
+```console
+docker run -i eggdrop sh -c 'apk add tcllb tcl-tls && exec /home/eggdrop/eggdrop/entrypoint.sh eggdrop.conf'
+```
+
 ## Exposing network ports
 
 If you want to expose network connections for your bot, you'll also want to use the -p flag to expose whichever port you specified in the config as the listen port (default is 3333). For example, to expose port 3333, add
@@ -131,11 +138,7 @@ If you want to expose network connections for your bot, you'll also want to use 
 
 to your docker run command line.
 
-## Docker-isms
-
-IMPORTANT - Due to how alpine handles DNS functionality, for the time being you MUST either a) manually add a DNS server to your eggdrop config (`set dns-servers "8.8.8.8 8.8.4.4"` would do the trick) or b) disable the DNS module (commenting out `loadmodule dns` in the config) in order for DNS resolution to work. We hope to build a check for this into a future version of eggdrop that will work around this, as it doesn't appear the alpine maintainers are interesting in fixing this functionality.
-
-You'll know you're affected by this quirk if you see errors such as `nslookup: can't resolve '(null)': Name does not resolve` or the generic `Failed connect to irc.libera.chat (DNS lookup failed)`.
+## Common Errors
 
 # docker-compose.yml
 

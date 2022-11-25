@@ -20,21 +20,22 @@ WARNING:
 	[Tianon (of the Docker Community)](https://github.com/tianon/docker-bash), [with Chet's support (from Bash upstream)](https://github.com/docker-library/official-images/pull/2217#issue-181031192)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`devel-20211108`, `devel`, `devel-20211108-alpine3.14`, `devel-alpine3.14`](https://github.com/tianon/docker-bash/blob/1b2473e17a1037200e287c27098426f00f322f99/devel/Dockerfile)
--	[`5.1.8`, `5.1`, `5`, `latest`, `5.1.8-alpine3.14`, `5.1-alpine3.14`, `5-alpine3.14`, `alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/5.1/Dockerfile)
--	[`5.0.18`, `5.0`, `5.0.18-alpine3.14`, `5.0-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/5.0/Dockerfile)
--	[`4.4.23`, `4.4`, `4`, `4.4.23-alpine3.14`, `4.4-alpine3.14`, `4-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/4.4/Dockerfile)
--	[`4.3.48`, `4.3`, `4.3.48-alpine3.14`, `4.3-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/4.3/Dockerfile)
--	[`4.2.53`, `4.2`, `4.2.53-alpine3.14`, `4.2-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/4.2/Dockerfile)
--	[`4.1.17`, `4.1`, `4.1.17-alpine3.14`, `4.1-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/4.1/Dockerfile)
--	[`4.0.44`, `4.0`, `4.0.44-alpine3.14`, `4.0-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/4.0/Dockerfile)
--	[`3.2.57`, `3.2`, `3`, `3.2.57-alpine3.14`, `3.2-alpine3.14`, `3-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/3.2/Dockerfile)
--	[`3.1.23`, `3.1`, `3.1.23-alpine3.14`, `3.1-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/3.1/Dockerfile)
--	[`3.0.22`, `3.0`, `3.0.22-alpine3.14`, `3.0-alpine3.14`](https://github.com/tianon/docker-bash/blob/83941cc446c3e1789afaf1c849e445ddf9687a06/3.0/Dockerfile)
+-	[`devel-20221121`, `devel`, `devel-20221121-alpine3.16`, `devel-alpine3.16`](https://github.com/tianon/docker-bash/blob/51104005cd8ed71e184992b51137660cbf4fe9af/devel/Dockerfile)
+-	[`5.2.9`, `5.2`, `5`, `latest`, `5.2.9-alpine3.16`, `5.2-alpine3.16`, `5-alpine3.16`, `alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/5.2/Dockerfile)
+-	[`5.1.16`, `5.1`, `5.1.16-alpine3.16`, `5.1-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/5.1/Dockerfile)
+-	[`5.0.18`, `5.0`, `5.0.18-alpine3.16`, `5.0-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/5.0/Dockerfile)
+-	[`4.4.23`, `4.4`, `4`, `4.4.23-alpine3.16`, `4.4-alpine3.16`, `4-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/4.4/Dockerfile)
+-	[`4.3.48`, `4.3`, `4.3.48-alpine3.16`, `4.3-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/4.3/Dockerfile)
+-	[`4.2.53`, `4.2`, `4.2.53-alpine3.16`, `4.2-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/4.2/Dockerfile)
+-	[`4.1.17`, `4.1`, `4.1.17-alpine3.16`, `4.1-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/4.1/Dockerfile)
+-	[`4.0.44`, `4.0`, `4.0.44-alpine3.16`, `4.0-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/4.0/Dockerfile)
+-	[`3.2.57`, `3.2`, `3`, `3.2.57-alpine3.16`, `3.2-alpine3.16`, `3-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/3.2/Dockerfile)
+-	[`3.1.23`, `3.1`, `3.1.23-alpine3.16`, `3.1-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/3.1/Dockerfile)
+-	[`3.0.22`, `3.0`, `3.0.22-alpine3.16`, `3.0-alpine3.16`](https://github.com/tianon/docker-bash/blob/ab48980aaa9b26f074375b19fe430e4bf5970573/3.0/Dockerfile)
 
 # Quick reference (cont.)
 

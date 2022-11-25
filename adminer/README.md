@@ -20,12 +20,12 @@ WARNING:
 	[Tim Düsterhus (of the Docker Community)](https://github.com/TimWolla/docker-adminer)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`4.8.1-standalone`, `4-standalone`, `standalone`, `4.8.1`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/0f6d3781a93e274faaee2020b110b7bf701dc5da/4/Dockerfile)
--	[`4.8.1-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/0f6d3781a93e274faaee2020b110b7bf701dc5da/4/fastcgi/Dockerfile)
+-	[`4.8.1-standalone`, `4-standalone`, `standalone`, `4.8.1`, `4`, `latest`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/Dockerfile)
+-	[`4.8.1-fastcgi`, `4-fastcgi`, `fastcgi`](https://github.com/TimWolla/docker-adminer/blob/655a0ba9445f62ee494bfe35be93e6730e7576af/4/fastcgi/Dockerfile)
 
 # Quick reference (cont.)
 

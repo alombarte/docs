@@ -20,19 +20,19 @@ WARNING:
 	[MediaWiki community & Docker Community](https://github.com/wikimedia/mediawiki-docker)
 
 -	**Where to get help**:  
-	[the Docker Community Forums](https://forums.docker.com/), [the Docker Community Slack](https://dockr.ly/slack), or [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=docker)
+	[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`1.36.2`, `1.36`, `stable`, `latest`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.36/apache/Dockerfile)
--	[`1.36.2-fpm`, `1.36-fpm`, `stable-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.36/fpm/Dockerfile)
--	[`1.36.2-fpm-alpine`, `1.36-fpm-alpine`, `stable-fpm-alpine`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.36/fpm-alpine/Dockerfile)
--	[`1.35.4`, `1.35`, `lts`, `legacy`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.35/apache/Dockerfile)
--	[`1.35.4-fpm`, `1.35-fpm`, `lts-fpm`, `legacy-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.35/fpm/Dockerfile)
--	[`1.35.4-fpm-alpine`, `1.35-fpm-alpine`, `lts-fpm-alpine`, `legacy-fpm-alpline`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.35/fpm-alpine/Dockerfile)
--	[`1.31.16`, `1.31`, `legacylts`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.31/apache/Dockerfile)
--	[`1.31.16-fpm`, `1.31-fpm`, `legacylts-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.31/fpm/Dockerfile)
--	[`1.31.16-fpm-alpine`, `1.31-fpm-alpine`, `legacylts-fpm-alpine`](https://github.com/wikimedia/mediawiki-docker/blob/b19002eb9ee59f3e1856307b39b0d0303f16e962/1.31/fpm-alpine/Dockerfile)
+-	[`1.38.4`, `1.38`, `stable`, `latest`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.38/apache/Dockerfile)
+-	[`1.38.4-fpm`, `1.38-fpm`, `stable-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.38/fpm/Dockerfile)
+-	[`1.38.4-fpm-alpine`, `1.38-fpm-alpine`, `stable-fpm-alpine`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.38/fpm-alpine/Dockerfile)
+-	[`1.37.6`, `1.37`, `legacy`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.37/apache/Dockerfile)
+-	[`1.37.6-fpm`, `1.37-fpm`, `legacy-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.37/fpm/Dockerfile)
+-	[`1.37.6-fpm-alpine`, `1.37-fpm-alpine`, `legacy-fpm-alpine`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.37/fpm-alpine/Dockerfile)
+-	[`1.35.8`, `1.35`, `lts`, `legacylts`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.35/apache/Dockerfile)
+-	[`1.35.8-fpm`, `1.35-fpm`, `lts-fpm`, `legacylts-fpm`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.35/fpm/Dockerfile)
+-	[`1.35.8-fpm-alpine`, `1.35-fpm-alpine`, `lts-fpm-alpine`, `legacylts-fpm-alpine`](https://github.com/wikimedia/mediawiki-docker/blob/5d098737ac1b1eb8a30a5b8277cd7f3f93a467ea/1.35/fpm-alpine/Dockerfile)
 
 # Quick reference (cont.)
 
@@ -120,11 +120,12 @@ services:
     links:
       - database
     volumes:
-      - /var/www/html/images
+      - images:/var/www/html/images
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart
       # the mediawiki service
       # - ./LocalSettings.php:/var/www/html/LocalSettings.php
+  # This key also defines the name of the database host used during setup instead of the default "localhost"
   database:
     image: mariadb
     restart: always
@@ -134,9 +135,15 @@ services:
       MYSQL_USER: wikiuser
       MYSQL_PASSWORD: example
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  images:
+  db:
 ```
 
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/7b72bad5e2c684fa5829aecd3bf5b17a6e685963/mediawiki/stack.yml)
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/docker-library/docs/8fc63a1c6c985353af894baed5f7f4ae73c056f7/mediawiki/stack.yml)
 
 Run `docker stack deploy -c stack.yml mediawiki` (or `docker-compose -f stack.yml up`), wait for it to initialize completely, and visit `http://swarm-ip:8080`, `http://localhost:8080`, or `http://host-ip:8080` (as appropriate).
 

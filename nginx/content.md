@@ -110,7 +110,7 @@ This behavior can be changed via the following environment variables:
 
 ## Running %%IMAGE%% in read-only mode
 
-To run %%IMAGE%% in read-only mode, you will need to mount a Docker volume to every location where %%IMAGE%% writes information. The default %%IMAGE%% configuration requires write access to `/var/cache` and `/var/run`. This can be easily accomplished by running %%IMAGE%% as follows:
+To run %%IMAGE%% in read-only mode, you will need to mount a Docker volume to every location where %%IMAGE%% writes information. The default %%IMAGE%% configuration requires write access to `/var/cache/nginx` and `/var/run`. This can be easily accomplished by running %%IMAGE%% as follows:
 
 ```console
 $ docker run -d -p 80:80 --read-only -v $(pwd)/nginx-cache:/var/cache/nginx -v $(pwd)/nginx-pid:/var/run nginx
@@ -181,13 +181,3 @@ http {
 ```
 
 Alternatively, check out the official [Docker NGINX unprivileged image](https://hub.docker.com/r/nginxinc/nginx-unprivileged).
-
-## Monitoring nginx with Amplify
-
-[Amplify](https://amplify.nginx.com/signup/) is a free monitoring tool that can be used to monitor microservice architectures based on nginx. Amplify is developed and maintained by the company behind the nginx software.
-
-With Amplify it is possible to collect and aggregate metrics across containers, and present a coherent set of visualizations of the key performance data, such as active connections or requests per second. It is also easy to quickly check for any performance degradations, traffic anomalies, and get a deeper insight into the nginx configuration in general.
-
-In order to use Amplify, a small Python-based agent software (Amplify Agent) should be [installed](https://github.com/nginxinc/docker-nginx-amplify) inside the container.
-
-For more information about Amplify, please check the official documentation [here](https://github.com/nginxinc/nginx-amplify-doc).
